@@ -134,6 +134,7 @@ export default class Cards extends Component {
                                         <Typography variant='p' id={data.id} onClick={()=>{
                                     this.setState({
                                         value:data.name,
+                                        
                                         cardId:data.id
                                     })
                                     this.handelModelOpen()

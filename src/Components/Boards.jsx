@@ -88,7 +88,7 @@ export default class Boards extends Component {
 
         }))
         .catch((err) => 
-            this.setState({
+            this.setState({ 
                 boards: [],
                 isLoading: false,
                 error: "Failed to load Boards",
@@ -165,7 +165,9 @@ export default class Boards extends Component {
 
         </DialogContent>
         <Stack direction={'column'} m={3}>
-            <Button variant="contained" size='small' onClick={this.oncreate}>Create</Button>
+            {
+                this.state.name.length < 1?<Button variant="contained" size='small' disabled onClick={this.oncreate} >Create</Button>:<Button variant="contained" size='small' onClick={this.oncreate}>Create</Button>
+            }
             <br></br>
             <Button variant="outlined" size='small' onClick={this.handleClose}>Cancel</Button>
         </Stack>
